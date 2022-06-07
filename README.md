@@ -7,7 +7,7 @@ pacman -S bspwm sxhkd polybar rxvt-unicode neovim neofetch dunst mpv mpd ncmpcpp
 ```
 # Install yay
 ```
-git clone https::/archlinux.org/yay.git
+git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
