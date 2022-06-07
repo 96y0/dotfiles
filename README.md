@@ -1,9 +1,15 @@
 # dotfiles
 zsh use ohmyzsh theme.
 
-# dependency
+# Install dependency
 ```
-sadsa
+pacman -S bspwm sxhkd polybar rxvt-unicode neovim neofetch dunst mpv mpd ncmpcpp picom rofi zathura ranger xorg xorg-server feh git
+```
+# Install yay
+```
+git clone https::/archlinux.org/yay.git
+cd yay
+makepkg -si
 ```
 
 # Screenshot
