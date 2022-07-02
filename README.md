@@ -1,9 +1,9 @@
 # dotfiles
-it's my dotfiles that I was try hard to make it.
-**Recommended as X11**
-Resolution:**1980x1020**
-OS: Arch linux
-WM:bspwm as X11
+it's my dotfiles that I was try hard to make it.<br>
+**Recommended as X11**<br>
+Resolution:**1980x1020**<br>
+OS: Arch linux<br>
+WM:bspwm as X11<br>
 
 # Install yay
 ```
