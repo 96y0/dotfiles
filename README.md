@@ -11,6 +11,7 @@ THEME: First
 
 ![alt text](themes/first/first.png)
 
-Bluriz
+THEME: Bluriz
+
 ![alt text](themes/bluriz/bluriz.png)
 
