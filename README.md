@@ -6,7 +6,11 @@
     <th>Picture</th>
   </tr>
   <tr>
-    <td></td>
+    <td>
+     OS:Arch Linux
+     WM:bspwm
+     COMPOSITOR:picom
+   </td>
     <td><img src="themes/first/first.png"  alt="1" width = 640px height = 320px ></td>
   </tr>
 </table> 
