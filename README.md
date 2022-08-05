@@ -5,11 +5,6 @@ Resolution:**1980x1020**<br>
 OS: Arch linux<br>
 WM:bspwm as X11<br>
 
-# Install yay
-```
-git clone https://aur.archlinux.org/yay.git ; cd yay ; makepkg -si
-```
-
 # Screenshot
 THEME: First
 
