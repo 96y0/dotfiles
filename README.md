@@ -7,9 +7,9 @@
   </tr>
   <tr>
     <td>
-     OS:Arch Linux
-     WM:bspwm
-     COMPOSITOR:picom
+     OS:Arch Linux<br>
+     WM:bspwm<br>
+     COMPOSITOR:picom<br>
    </td>
     <td><img src="themes/first/first.png"  alt="1" width = 640px height = 320px ></td>
   </tr>
