@@ -1,0 +1,46 @@
+﻿URxvt*letterSpace:      0
+Urxvt.intensityStyles:	false
+URxvt*font:             xft:JetBrainsMono Nerd Font Mono:size=30:pixelsize=20:minspace=False
+URxvt*scrollBar:	false
+*antialias:             true
+*autohint:              true
+
+URxvt.perl-ext-common:	resize-font,url-select,selection-to-clipboard
+URxvt.keysym.M-c:       perl:clipboard:copy
+URxvt.keysym.M-v:       perl:clipboard:paste
+URxvt.keysym.M-C-v:     perl:clipboard:paste_escaped
+
+*background: #101026
+*foreground: #9291cd
+
+! Gray
+*color0: #2c2c2c
+*color8: #3a3a3a
+
+! Red
+*color1: #7b0000
+*color9: #a50000
+
+! Green
+*color2: #03670c
+*color10:#008b0c
+
+! Yellow
+*color3: #a1ba00
+*color11:#b5d100
+
+! Blue
+*color4: #003289
+*color12:#0549bc
+
+! Maguve
+*color5: #5900a0
+*color13:#6900bd
+
+! Pink
+*color6: #ve00b6
+*color14:#ff2cf6
+
+! Whites
+*color7: #b9b9b9
+*color15: #d9d9d9
