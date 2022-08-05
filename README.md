@@ -6,7 +6,7 @@
     <th>Picture</th>
   </tr>
   <tr>
-    <td>![alt text](themes/first/first.png)</td>
+    <td><img src="themes/first/first.png"  alt="1" width = 360px height = 640px ></td>
   </tr>
 </table> 
 # Screenshot
