@@ -2,9 +2,8 @@
 
  <table>
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>Info</th>
+    <th>Picture</th>
   </tr>
   <tr>
     <td>![alt text](themes/first/first.png)</td>
