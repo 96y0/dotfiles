@@ -25,7 +25,7 @@
     Compositor:picom<br>
     Files manager:ranger<br>
     Noti:dunst<br>
-    Text Editor:Neovim<br>
+    Text Editor:Neovim (NvChad)<br>
     Bar:Polybar<br>
     SI:fet.sh<br>
     APPLET:conky<br>
