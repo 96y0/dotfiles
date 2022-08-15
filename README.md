@@ -24,7 +24,7 @@ Bar:Polybar<br>
     Compositor:picom<br>
     File manager:ranger<br>
     Noti:dunst<br>
-    Text Editor:Neovim
+    Text Editor:Neovim<br>
     Bar:Polybar<br>
     APPLET:conky<br>
 </div>
