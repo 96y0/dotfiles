@@ -37,7 +37,6 @@
     OS:Arch Linux<br>
     WM:bspwm<br>
     Term:urxvt<br>
-    Compositor:picom (still in progress)<br>
     Files manager:nautilus<br>
     Noti:dunst<br>
     Text Editor:Neovim<br>
