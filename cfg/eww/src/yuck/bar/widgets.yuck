@@ -1,0 +1,78 @@
+(defwidget launcher []
+  (box :orientation "v"
+       :spacing 5
+       :space-evenly "false"
+  (button 
+      :class "launcher"
+      :onclick "scripts/rofi" "")
+  )
+)
+
+(defpoll hour :interval "1s" "date +%H")
+(defpoll min  :interval "1s" "date +%M")
+(defwidget time []
+  (box
+    :orientation "v"
+    :class "time"
+    :valign "end"
+    :spacing 0
+  (button 
+    :onclick "notify-send HI"
+    :class "time-hour" hour
+  )
+  (button
+    :onclick "notify-send Watson"
+    :class "time-min" min
+  )
+  )
+)
+
+(defwidget panel []
+  (box
+    :orientation "v"
+    :class "panel"
+    :valign "end"
+    :spacing -2
+  (button
+    :onclick "scripts/battery"
+    :class "bat-icon" ""
+  )
+  (button
+    :onclick "scripts/network"
+    :class "wifi-icon" ""
+  )
+ (button
+    :onclick "scripts/sounds"
+    :class "vol-icon" ""
+  )
+  (button
+    :onclick "scripts/brightness"
+    :class "bright-icon" ""
+  )
+))
+
+
+;; TOP WIDGETS
+(defwidget top []
+  (box
+    :orientation "v"
+    :space-evenly "false"
+    :valign "start"
+(launcher)))
+
+;; BUTTOM WIDGETS
+(defwidget buttom []
+  (box
+    :orientation "v"
+    :space-evenly "false"
+    :valign "end"
+(panel)(time)))
+
+
+(defwidget bar []
+  (box
+    :class "eww_bar"
+    :orientation "v"
+    :vexpand "false"
+    :hexpand "false"
+(top)(buttom)))

@@ -1,0 +1,14 @@
+(defwindow bar
+  :geometry (geometry :x        "0"
+                      :y        "0"
+                      :width    "45px"
+                      :height   "100%"
+            )
+  :reserve (struts    :distance "50px"
+                      :side     "left"
+            )
+  :monitor 0
+  :wm-ignore false
+  :windowtype "dock"
+  :halign "center"                
+(bar))

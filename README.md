@@ -2,7 +2,7 @@
 all of my dotfiles.
 
 # 1
-<img src="scr/2.png"  alt="1" width = 600px height = 320px align="left"><br><br>
+<img src="scr/1.png"  alt="1" width = 600px height = 320px align="left"><br><br>
 <div margin-right="10px">
 OS:Arch Linux<br>
 WM:bspwm<br>
@@ -16,7 +16,7 @@ Bar:Polybar<br>
 <br><br><br>
 
 # 2
-<img src="scr/1.png"  alt="1" width = 600px height = 320px align="left"><br><br>
+<img src="scr/2.png"  alt="1" width = 600px height = 320px align="left"><br><br>
 <div>
     OS:Arch Linux<br>
     WM:bspwm<br>
@@ -32,6 +32,7 @@ Bar:Polybar<br>
 
 # 3
 <img src="scr/3.png"  alt="1" width = 600px height = 320px align="left"><br><br>
+<div>
     OS:Arch Linux<br>
     WM:bspwm<br>
     Term:urxvt<br>
@@ -39,4 +40,17 @@ Bar:Polybar<br>
     Noti:dunst<br>
     Text Editor:Neovim<br>
     Bar:Polybar<br>
+</div>
+<br><br><br>
 
+# 4
+<img src="scr/4.png"  alt="1" width = 600px height = 320px align="left"><br><br>
+<div>
+    OS:Arch Linux<br>
+    WM:bspwm<br>
+    Term:Alacritty<br>
+    File manager:nautilus<br>
+    Noti:dunst<br>
+    Text Editor:Neovim<br>
+    Widget:eww<br>
+</div>

@@ -1,0 +1,27 @@
+
+[global/wm]
+include-file = $HOME/.config/polybar/modules.ini
+include-file = $HOME/.config/polybar/system.ini
+
+[color]
+background = #181f21
+foreground = #FFFFFF
+foreground-alt = #181f21
+
+[bar/main]
+wm-restack = bspwm
+bottom = false
+tray-position = right
+fixed-center = true
+width = 99%
+height = 35
+offset-x = 10
+offset-y = 10
+background = ${color.background}
+foreground = ${color.foreground}
+modules-right = alsa network
+modules-center = date
+modules-left = workspaces title
+font-0 = DaddyTimeMono Nerd Font:size=12;2
+font-1 = Feather:style=Bold:size=12;2
+font-3 = FontAwesome:pixelsize=14;0

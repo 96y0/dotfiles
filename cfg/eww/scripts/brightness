@@ -1,0 +1,3 @@
+#!/bin/bash
+
+notify-send "Brightness Status" `cat /sys/class/backlight/amdgpu_bl0/brightness`"%"
