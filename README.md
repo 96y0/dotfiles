@@ -1,6 +1,6 @@
-# INFO
+# Info
 
-<img align="right" src="gfx/screenshot-1.png" height="320" width=540/>
+<img align="right" src="gfx/screenshot-1.png" height="260" width=540/>
 
 - **OS**: [Gentoo Linux](https://www.gentoo.org/)
 - **WM**: [bspwm](https://github.com/baskerville/bspwm)
@@ -13,4 +13,8 @@
 
 
 
+## Depedencies
+```bash
+emerge -av x11-wm/bspwm  media-sound/cava media-sound/pulsemixer media-gfx/scrot x11-misc/sxhkd x11-apps/setxkbmap x11-apps/xsetroot x11-misc/picom-jonaburg x11-misc/polybar x11-misc/rofi x11-misc/xclip x11-terms/alacritty xfce-base/thunar
+```
 
