@@ -1,6 +1,6 @@
 # INFO
 
-<img align="right" src="gfx/screenshot-1.png" height="320" width=600/>
+<img align="right" src="gfx/screenshot-1.png" height="320" width=540/>
 
 - **OS**: [Gentoo Linux](https://www.gentoo.org/)
 - **WM**: [bspwm](https://github.com/baskerville/bspwm)
