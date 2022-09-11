@@ -16,6 +16,6 @@
 
 ## Depedencies
 ```
-emerge -av x11-wm/bspwm media-sound/cava media-sound/pulsemixer media-gfx/scrot x11-misc/sxhkd x11-apps/setxkbmap x11-apps/xsetroot x11-misc/picom-jonaburg x11-misc/polybar x11-misc/rofi x11-misc/xclip x11-terms/alacritty xfce-base/thunar app-editors/neovim
+emerge -av x11-wm/bspwm media-sound/cava media-sound/pulsemixer media-gfx/scrot media-gfx/feh x11-misc/sxhkd x11-apps/setxkbmap x11-apps/xsetroot x11-misc/picom-jonaburg x11-misc/polybar x11-misc/rofi x11-misc/xclip x11-terms/alacritty xfce-base/thunar app-editors/neovim
 ```
 
