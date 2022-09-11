@@ -59,4 +59,7 @@ require('packer').startup(function()
 
   -- Discord presence 
   use 'andweeb/presence.nvim'
+
+  -- Code intellisence
+  use {'neoclide/coc.nvim', branch = 'release'}
 end)

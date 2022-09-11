@@ -1,6 +1,7 @@
 require("options")
 require("keymaps")
 require("packers")
+--require("coc")
 
 require("nvim-tree").setup()
 -- require('feline').setup()
