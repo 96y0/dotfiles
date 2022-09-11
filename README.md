@@ -7,7 +7,7 @@
 - **Shell**: zsh
 - **Panel**: Polybar
 
-
+<img align="right" src="gfx/screenshot-1.png" />
 
 
 
