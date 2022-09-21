@@ -62,4 +62,7 @@ require('packer').startup(function()
 
   -- Code intellisence
   use {'neoclide/coc.nvim', branch = 'release'}
+
+  -- Dashboard
+  use {'glepnir/dashboard-nvim'}
 end)

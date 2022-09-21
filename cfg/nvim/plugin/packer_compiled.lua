@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/watson/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/home/watson/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
+  },
   ["github-nvim-theme"] = {
     loaded = true,
     path = "/home/watson/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
