@@ -22,5 +22,3 @@ o.softtabstop = 2
 o.ignorecase = true
 o.smartcase =true
 o.mouse = "a"
-
-
