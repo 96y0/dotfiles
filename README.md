@@ -1,6 +1,6 @@
 # Info
 
-<img src="screenshot.png" height="1280" width="720"/>
+<img src="screenshot.png" height="720" width="1080"/>
 
 - **OS**: [Gentoo Linux](https://www.gentoo.org/)
 - **WM**: [bspwm](https://github.com/baskerville/bspwm)
@@ -10,16 +10,16 @@
 
 
 # Depedencies
-```
-x11-wm/bspwm 
-media-gfx/scrot 
-media-gfx/feh 
-x11-misc/sxhkd 
-x11-apps/setxkbmap 
-x11-apps/xsetroot 
-x11-misc/polybar 
-x11-misc/rofi 
-x11-misc/xclip 
+
+x11-wm/bspwm<br>
+media-gfx/scrot<br>
+media-gfx/feh<br>
+x11-misc/sxhkd<br>
+x11-apps/setxkbmap<br> 
+x11-apps/xsetroot<br>
+x11-misc/polybar<br>
+x11-misc/rofi<br>
+x11-misc/xclip<br>
 x11-terms/alacritty
-```
+
 
