@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun
+	rofi -show drun -theme $HOME/.local/share/rofi/themes/tokyonight/tokyonight.rasi
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -122,10 +122,10 @@ super + {Left,Down,Up,Right}
 
 # PrtSrc
 Print
-    scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/screenshots && mv $f ~/screenshots && xclip -selection clipboard -t image/png -i ~/screenshots/`ls -1 -t ~/screenshots | head -1`'
+    scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/SCTs && mv $f ~/Pictures/SCTs && xclip -selection clipboard -t image/png -i ~/Pictures/SCTs/`ls -1 -t ~/Pictures/SCTs | head -1`'
 
 shift + Print
-    scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/screenshots && mv $f ~/screenshots && xclip -selection clipboard -t image/png -i ~/screenshots/`ls -1 -t ~/screenshots | head -1`'␘
+    scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/SCTs && mv $f ~/Pictures/SCTs && xclip -selection clipboard -t image/png -i ~/Pictures/SCTs/`ls -1 -t ~/Pictures/SCTs | head -1`'␘
 
 # Brightness increase/decrease
 XF86MonBrightness{Up,Down}
