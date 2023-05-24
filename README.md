@@ -1,8 +1,5 @@
 # Info
 
-<img src="screenshot.png" height="720" width="1080"/>
-
-- **OS**: [Gentoo Linux](https://www.gentoo.org/)
 - **WM**: [bspwm](https://github.com/baskerville/bspwm)
 - **Terminal**: [alacritty](https://github.com/alacritty/alacritty)
 - **Panel**: [Polybar](https://github.com/polybar/polybar)
