@@ -10,7 +10,7 @@ setxkbmap -option grp:alt_shift_toggle us,th &
 
 # Autostart Apps
 pgrep -x sxhkd > /dev/null || sxhkd &
-feh --bg-scale /home/watson/Pictures/wallpaper.jpg &
+feh --bg-scale /home/watson/Pictures/wallpaper-5.png &
 $HOME/.config/polybar/launch.sh &
 #picom --experimental-backend &
 
