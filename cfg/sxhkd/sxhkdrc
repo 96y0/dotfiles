@@ -2,6 +2,9 @@
 # wm independent hotkeys
 #
 
+alt + @space
+    bsp-layout next
+
 # terminal emulator
 super + Return
 	alacritty
