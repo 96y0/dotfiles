@@ -1,22 +1,20 @@
 # Info
 
 - **WM**: [bspwm](https://github.com/baskerville/bspwm)
-- **Terminal**: [alacritty](https://github.com/alacritty/alacritty)
+- **Terminal**: [kitty](https://github.com/kovidgoyal/kitty)
 - **Panel**: [Polybar](https://github.com/polybar/polybar)
 - **Application launcher**: [Rofi](https://github.com/davatorium/rofi)
 
+- Font list
+    - CascadiaCode
+    - JetBrainsMonoNF
+    - Material
+    - MesloLGS NF
+    - Taviraj
 
-# Depedencies
+# Installation
 
-x11-wm/bspwm<br>
-media-gfx/scrot<br>
-media-gfx/feh<br>
-x11-misc/sxhkd<br>
-x11-apps/setxkbmap<br> 
-x11-apps/xsetroot<br>
-x11-misc/polybar<br>
-x11-misc/rofi<br>
-x11-misc/xclip<br>
-x11-terms/alacritty
+- Gentoo Linux `gentoo-script`
+- Void Linux `void-script` 
 
 
