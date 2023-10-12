@@ -4,6 +4,10 @@
 echo "Install dependencies..."
 xbps-install -Syu rofi bspwm sxhkd feh setxkbmap xsetroot xclip scrot kitty
 
+# move wallpaper
+echo "Move wallpaper to Pictures"
+mv -v wallpaper.jpg $HOME/Pictures/
+
 # Install config
 echo "Install config"
 mkdir -p $HOME/.config

@@ -3,6 +3,10 @@
 # Install dependencies
 emerge --noreplace x11-wm/bspwm x11-misc/sxhkd x11-apps/setxkbmap x11-apps/xsetroot x11-misc/polybar x11-misc/rofi x11-misc/xclip media-gfx/scrot media-gfx/feh x11-term/kitty
 
+# move wallpaper
+echo "Move wallpaper to Pictures"
+mv -v wallpaper.jpg $HOME/Pictures/
+
 # Install config
 echo "Install config"
 mkdir -p $HOME/.config
