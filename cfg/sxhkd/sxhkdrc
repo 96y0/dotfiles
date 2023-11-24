@@ -2,7 +2,8 @@
 # wm independent hotkeys
 #
 
-alt + @space
+# bspwm layout
+super + @space
 	bsp-layout next
 
 # terminal emulator
@@ -10,8 +11,16 @@ super + Return
 	kitty
 
 # program launcher
-super + @space
-	rofi -show drun -theme $HOME/.local/share/rofi/themes/tokyonight/tokyonight.rasi
+super + r
+	rofi -show drun
+
+# browser
+super + shift + w
+  firefox
+
+# file manager
+super + shift + f
+  nautilus
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -132,7 +141,7 @@ shift + Print
 
 # Brightness increase/decrease
 XF86MonBrightness{Up,Down}
-	brightnessctl s 5{+,-}
+	brightnessctl s 5%{+,-}
 
 # Changing the Volume
 XF86Audio{Raise,Lower}Volume
