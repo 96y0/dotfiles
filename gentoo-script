@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install dependencies
-emerge --noreplace x11-wm/bspwm x11-misc/sxhkd x11-apps/setxkbmap x11-apps/xsetroot x11-misc/polybar x11-misc/rofi x11-misc/xclip media-gfx/scrot media-gfx/feh x11-term/kitty
+sudo emerge --noreplace x11-wm/bspwm x11-misc/sxhkd x11-apps/setxkbmap x11-apps/xsetroot x11-misc/polybar x11-misc/rofi x11-misc/xclip media-gfx/scrot media-gfx/feh x11-term/kitty
 
 # move wallpaper
 echo "Move wallpaper to Pictures"
@@ -9,19 +9,19 @@ mv -v wallpaper.jpg $HOME/Pictures/
 
 # Install config
 echo "Install config"
-mkdir -p $HOME/.config
+mkdir -pv $HOME/.config
 mv -fv cfg/* $HOME/.config/
 
 # Install fonts
 echo "Install fonts"
-mkdir -p $HOME/.fonts
+mkdir -pv $HOME/.fonts
 mv -fv fonts/* $HOME/.fonts
 fc-cache -fv
 
 # Setup rofi theme
 echo "Setup rofi theme"
-mkdir -p $HOME/.local/share/rofi/themes
-mv rofi-themes/tokyonight $HOME/.local/share/rofi/themes/
-rm -r rofi-themes
+mkdir -pv $HOME/.local/share/rofi/themes
+mv -v rofi-themes/tokyonight.rasi $HOME/.local/share/rofi/themes/
+rm -rv rofi-themes
 
 
