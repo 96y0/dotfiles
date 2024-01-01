@@ -7,9 +7,3 @@
 **Notification**: [dunst](https://github.com/dunst-project/dunst) <br>
 **File Manager**: [nautilus](https://github.com/GNOME/nautilus)/[ranger](https://github.com/ranger/ranger) <br>
 
-# Installation
-
-- Gentoo Linux `gentoo-script`
-- Void Linux `void-script` 
-
-
