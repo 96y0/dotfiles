@@ -5,8 +5,8 @@ cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-      -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+      require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
       -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
       -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
     end,
@@ -24,8 +24,8 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'vsnip' }, -- For vsnip users.
-    -- { name = 'luasnip' }, -- For luasnip users.
+    -- { name = 'vsnip' }, -- For vsnip users.
+    { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
     -- { name = 'snippy' }, -- For snippy users.
   }, {
@@ -91,10 +91,33 @@ local on_attach = function(client, bufnr)
 end
 
 
-local servers = {'cmake', 'clangd', 'html', 'lua_ls'}
-for _, lsp in pairs(servers) do
-  require('lspconfig')[lsp].setup {
-   capabilities = capabilities,
-    on_attach = on_attach, 
-  }
-end
+-- local servers = {'cmake','clangd','bashls','lua_ls'}
+-- for _, lsp in pairs(servers) do
+--   require('lspconfig')[lsp].setup {
+--    capabilities = capabilities--,
+--     -- on_attach = on_attach, 
+--   }
+-- end
+require'lspconfig'.clangd.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"c", "cpp", "objc", "objcpp"}
+}
+
+require'lspconfig'.cmake.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"cmake"}
+}
+
+require'lspconfig'.bashls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"sh"}
+}
+
+require'lspconfig'.lua_ls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"lua"}
+}
