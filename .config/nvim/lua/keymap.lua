@@ -1,26 +1,31 @@
-local map = vim.api.nvim_set_keymap
+-- Leader key
+vim.g.mapleader = " "
 
--- Custom keybinds
-map('n', '<c-s>', ':w<CR>',{})
--- map('n', '<c-a>', ':!gcc % && ./a.out<CR>', {})
+-- Explorer and Save
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ss", ":w<CR>")
 
--- Move up/down line
-map('n', '<A-j>', ':m .+1<cr>==', {})
-map('n', '<A-k>', ':m .-2<cr>==', {})
-map('i', '<A-j>', ':m .+1<cr>==gi', {})
-map('i', '<A-k>', ':m .-2<cr>==gi', {})
-map('v', '<A-j>', ':m .+1<cr>gv=gv', {})
-map('v', '<A-k>', ':m .-2<cr>gv=gv', {})
+-- Jump with center cursor
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- Move line
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Copy to system clipboard
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- Buffer keybinding
+vim.keymap.set("n", "<A-z>", ":bprevious<CR>", {})
+vim.keymap.set("n", "<A-x>", ":bnext<CR>", {})
+vim.keymap.set("n", "<A-w>", ":bw<CR>", {})
+vim.keymap.set("n", "<A-q>", ":bd<CR>", {})
 
 -- SymbolsOutline
-map('n', '<F2>', ':SymbolsOutline<CR>', {})
-
--- Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>?', builtin.oldfiles, {})
-vim.keymap.set('n', '<leader>fd', builtin.diagnostics, {})
-vim.keymap.set('n', '<leader>fv', builtin.builtin, {})
+vim.keymap.set("n", "<leader>so", ":SymbolsOutline<CR>", {})
