@@ -1,0 +1,52 @@
+#! /bin/sh
+
+#------------------ Autostart Apps ------------------#
+
+# Fix cursor
+xsetroot -cursor_name left_ptr &
+
+# Sxhkd
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Pipewire
+gentoo-pipewire-launcher &
+
+# Wallpaper
+feh --bg-scale $HOME/.config/bspwm/wallpaper/wallpaper.png &
+
+# Dunst
+dunst &
+
+# Polybar
+$HOME/.config/polybar/launch.sh &
+
+#------------------ Window rules --------------------#
+bspc monitor -d 1 2 3 4 5 6 7 8 9
+
+bspc rule -a firefox                     follow=on
+bspc rule -a discord                     follow=on
+bspc rule -a Steam                       follow=on
+bspc rule -a Code                        follow=on
+bspc rule -a Spotify			         follow=on
+bspc rule -a kitty                       state=floating
+bspc rule -a Thunar                      state=floating
+bspc rule -a feh                         state=floating
+bspc rule -a eog                         state=floating
+baps rule -a evince                      state=floating
+
+#------------------ Bspwm config ---------------------#
+
+bspc config border_width         2
+bspc config window_gap           4
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc config active_border_color   \#637A9F
+bspc config normal_border_color   \#637A9F
+bspc config urgent_border_color   \#1a1a1a
+bspc config focused_border_color  \#C9D7DD
+bspc config presel_border_color   \#1a1a1a
+
+#--------------------- Other -------------------------#

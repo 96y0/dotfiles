@@ -1,0 +1,12 @@
+[global]
+format = "<b>%s</b>\n%b"
+
+origin = top-center
+offset = 22x22
+frame_width = 2
+frame_color = "#ffffff"
+separator_color= frame
+font = "JetBrainsMonoNF 10"
+corner_radius = 7
+background = "#262626"
+foreground = "#ffffff"
