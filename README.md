@@ -1,5 +1,5 @@
 # Info
-This is my dotfiles for my linux setup.
+This is dotfiles for my linux setup.
  - **OS**: Gentoo Linux
  - **WM**: Bspwm/Hyprland
  - **Terminal**: kitty
