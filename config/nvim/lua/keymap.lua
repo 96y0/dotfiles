@@ -33,3 +33,6 @@ vim.keymap.set("n", "<A-q>", ":bd<CR>", {})
 
 -- SymbolsOutline
 vim.keymap.set("n", "<leader>so", ":SymbolsOutline<CR>", {})
+
+-- Undotree
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle) 

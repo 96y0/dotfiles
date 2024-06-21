@@ -1,37 +1,43 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+local plugins = {
+	'mbbill/undotree',
+	'tpope/vim-fugitive',
+	'tpope/vim-commentary',
+	'tpope/vim-surround',
+	'williamboman/mason.nvim',
+	'williamboman/mason-lspconfig.nvim',
+	'neovim/nvim-lspconfig',
+	'L3MON4D3/LuaSnip',
+	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-nvim-lsp',
+	'hrsh7th/cmp-buffer',
+	'hrsh7th/cmp-cmdline',
+	'windwp/nvim-autopairs',
+	'simrat39/symbols-outline.nvim',
+	'nvim-lualine/lualine.nvim',
+	'mfussenegger/nvim-dap',
+	'rcarriga/nvim-dap-ui',
+	'nvim-neotest/nvim-nio',
+	'lewis6991/gitsigns.nvim',
+	'RRethy/vim-illuminate',
+    'nvim-treesitter/nvim-treesitter',
+    "ellisonleao/gruvbox.nvim",
 
-return require('packer').startup(function(use)
-	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.5',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
-    use 'ellisonleao/gruvbox.nvim'
-	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'} 
-	use 'ThePrimeagen/harpoon'
-	use 'mbbill/undotree'
-	use 'tpope/vim-fugitive'
-	use 'tpope/vim-commentary'
-	use 'tpope/vim-surround'
-	use 'williamboman/mason.nvim'
-	use 'williamboman/mason-lspconfig.nvim'
-	use 'neovim/nvim-lspconfig'
-	use 'L3MON4D3/LuaSnip'
-	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-cmdline'
-    use 'windwp/nvim-autopairs'
-    use 'simrat39/symbols-outline.nvim'
-    use 'nvim-lualine/lualine.nvim'
-    use 'Civitasv/cmake-tools.nvim'
-    use 'mfussenegger/nvim-dap'
-    use 'rcarriga/nvim-dap-ui'
-    use 'nvim-neotest/nvim-nio'
-    use 'lewis6991/gitsigns.nvim'
-    use 'RRethy/vim-illuminate'
-end)
+	{ 'nvim-telescope/telescope.nvim', tag = '0.1.6', dependencies = { 'nvim-lua/plenary.nvim' } }
+}
+
+local opts = {}
+
+require("lazy").setup(plugins, opts)
