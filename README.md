@@ -8,6 +8,7 @@
 | --- | --- |
 | wm | [Hyprland](https://github.com/hyprwm/Hyprland) |
 | terminal | [kitty](https://github.com/kovidgoyal/kitty) |
+| launcher | [rofi](https://github.com/davatorium/rofi) |
 | editor | [neovim](https://github.com/neovim/neovim) |
 | bar | [eww](https://github.com/elkowar/eww) |
 | notification | [dunst](https://github.com/dunst-project/dunst) |
