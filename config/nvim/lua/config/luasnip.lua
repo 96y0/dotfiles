@@ -1,0 +1,5 @@
+require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip").filetype_extend("c", { "cdoc" })
+require("luasnip").filetype_extend("lua", { "luadoc" })
+require("luasnip").filetype_extend("python", { "pydoc" })
+require("luasnip").filetype_extend("rust", { "rustdoc" })

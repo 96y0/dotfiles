@@ -1,0 +1,73 @@
+(defwidget db_actions []
+ (box :orientation "h" :space-evenly false
+  (box :class "box db_sub_box db_profile_box" :orientation "h" :space-evenly false :halign "start"
+    (box :class "db_profile_image")
+    (box :orientation "v" :space-evenly false
+      (label :halign "start" :class "db_profile_name" :text "Watson")
+      (label :halign "start" :class "db_profile_runtime" :text "Uptime ${uptime}") 
+    )
+  )
+  (box :class "box db_sub_box db_action_box" :orientation "h" :space-evenly false :halign "end"
+   (button :class "db_action_btn" :onclick "kitty --detach -e nmtui" "${wifi_status}")
+   (button :class "db_action_btn" :onclick "kitty --detach -e pulsemixer" "")
+   (button :class "db_action_btn" :onclick "$HOME/.config/rofi/powermenu/powermenu.sh" " ")
+  )
+ )
+)
+
+(defwidget db_stats []
+ (box :class "box db_sub_box" :orientation "v" :space-evenly "true"
+  (box :orientation "h" :space-evenly "false" 
+   (label :class "db_bright_icon" :text "")
+   (box :class "bright" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false"
+    (scale :orientation "h" :min 0 :max 100 :value brightness :onchange "brightnessctl set {}%" )
+   )
+   (label :class "db_stat_text" :text "${brightness}%")
+  )
+  (box :orientation "h" :space-evenly "false" 
+   (label :class "db_vol_icon" :text "")
+   (box :class "bright" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false"
+    (scale :orientation "h" :min 0 :max 100 :value volume :onchange "pulsemixer --set-volume {}" )
+   )
+   (label :class "db_stat_text" :text "${volume}%")
+  )
+ )
+)
+
+(defwidget db_spotify []
+  (box :class "box db_sub_box" :orientation "h" :space-evenly "false"
+    (box :orientation "h" :space-evenly false :class "db_spotify_image" :style "background-image: url('${song_img_path}');")
+    (box :orientation "v" :space-evenly false :class "db_spotify_text" :hexpand true
+     (label :class "db_spotify_title" :halign "start" :limit-width 26 :hexpand false :text {song_title}) 
+     (label :class "db_spotify_artist" :halign "start" :hexpand false :text {song_artist}) 
+     (box :class "db_spotify_action_box" :orientation "h" :space-evenly true 
+      (button :onclick "playerctl --player=spotify previous" "󰒮")
+      (button :onclick "playerctl --player=spotify play-pause" {song_status == "Playing" ? "󰓛" : "󰐊"})
+      (button :onclick "playerctl --player=spotify next" "󰒭")
+     )
+    )
+  )
+)
+
+(defwidget db_footer []
+  (box :class "db_footer" :orientation "h" :halign "end"
+   (label :class "bat_text" :text "BAT ${battery}%")
+  )
+)
+
+(defwidget dashboard []
+  (box :orientation "v" :space-evenly "false"
+   (db_actions)
+   (db_stats)  
+   (db_spotify)
+   (db_footer)
+  )
+)
+
+(defwindow dashboard 
+  :class "dashboard"
+  :monitor 0
+  :geometry (geometry :x "0.25%" :y 44 :width 420 :anchor "top right")
+  :windowtype "dialog"
+  :stacking "fg"
+(dashboard))

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+EWW=$(which eww)
+
+# Run daemon
+if [[ ! `pidof eww` ]]; then
+  ${EWW} daemon
+  sleep 1
+else
+  echo "Eww is already running!"
+fi
+
+run_eww() {
+  #eww open-many bar date
+  eww open bar
+}
+
+run_eww

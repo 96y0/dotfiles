@@ -1,0 +1,24 @@
+.cal-box {
+  background-color: $base-color;
+  padding: 12px;
+
+  border-radius: 8px;
+}
+
+.cal-time {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.cal-date {
+  color: $text-medium-color;
+  padding-bottom: 12px;
+}
+
+calendar {
+  padding: 4px;
+
+  &:indeterminate {
+    color: $text-dark-color;
+  }
+}

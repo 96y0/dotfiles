@@ -31,8 +31,11 @@ vim.keymap.set("n", "<A-x>", ":bnext<CR>", {})
 vim.keymap.set("n", "<A-w>", ":bw<CR>", {})
 vim.keymap.set("n", "<A-q>", ":bd<CR>", {})
 
--- SymbolsOutline
-vim.keymap.set("n", "<leader>so", ":SymbolsOutline<CR>", {})
+-- Projects
+vim.keymap.set('n', '<leader>pp', ":Telescope projects<CR>", {})
 
 -- Undotree
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle) 
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+
+-- Neogit
+vim.keymap.set('n', '<leader>gg', ":Neogit<CR>", {})

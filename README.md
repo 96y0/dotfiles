@@ -1,21 +1,47 @@
-# Info
-This is dotfiles for my linux setup.
- - **OS**: Gentoo Linux
- - **WM**: Bspwm/Hyprland
- - **Terminal**: kitty
- - **Notification**: dunst/mako
- - **Bar**: polybar/waybar
+![preview](preview.png)
 
+---
 
-# Dependencies
+## Details
 
-### Hyprland depedencies
+| task | name |
+| --- | --- |
+| wm | [Hyprland](https://github.com/hyprwm/Hyprland) |
+| terminal | [kitty](https://github.com/kovidgoyal/kitty) |
+| editor | [neovim](https://github.com/neovim/neovim) |
+| bar | [eww](https://github.com/elkowar/eww) |
+| notification | [dunst](https://github.com/dunst-project/dunst) |
+| file browser | [yazi](https://github.com/sxyazi/yazi) / [nemo](https://github.com/linuxmint/nemo) |
+| gtk-theme | [catppucin](https://github.com/catppuccin/catppuccin) |
+| font | JetBrainsMonoNF |
+
+---
+
+## Setup
+
+> NOTE: You must have guru repo to be able to install all dependencies.
+
+1. Install dependencies
 ```bash
-emerge --ask gui-wm/hyprland gui-apps/hyprpaper gui-apps/hyprlock gui-apps/grim gui-apps/slurp gui-apps/waybar gui-apps/wofi gui-apps/wl-clipboard gui-apps/mako app-misc/yazi x11-terms/kitty
+emerge --ask gui-wm/hyprland gui-libs/xdg-desktop-portal-hyprland gui-apps/hyprlock \
+gui-apps/hyprshot gui-apps/eww gui-apps/wl-clipboard app-misc/yazi \
+x11-terms/kitty gui-apps/rofi-wayland gui-apps/swww gnome-extra/nemo app-editors/neovim \
+app-misc/brightnessctl media-sound/pulsemixer media-sound/playerctl
 ```
 
-
-### BSPWM depedencies
+2. Clone the repo
 ```bash
-emerge --ask x11-wm/bspwm x11-misc/sxhkd media-gfx/scrot x11-misc/xclip x11-misc/polybar x11-terms/kitty app-misc/yazi x11-misc/dunst x11-misc/betterlockscreen
+git clone https://github.com/Potcharapoll/dotfiles
+cd dotfiles
+```
+
+3. copy all config
+```bash
+cp -r config/* $HOME/.config/
+cp -r icons/* $HOME/.icons/
+cp -r themmes/* $HOME/.themes/
+cp -r fonts/* $HOME/.fonts/
+cp -r .oh-my-bash/ $HOME/
+cp .tmux.conf $HOME/
+cp .vimrc $HOME/
 ```
