@@ -1,0 +1,69 @@
+* {
+  font:       "JetBrainsMonoNF 10";
+  background: #C52F53;
+  foreground: #F48EA2;
+  selected:   #FAB8BF;
+}
+
+configuration {
+  modi: "drun";
+  display-drun: "Applications";
+  show-icons: true;
+}
+
+window {
+  transparency: "real";
+  location:     center;
+  anchor:       center;
+  width:        800px;
+  height:       480px;
+  x-offset:     0px;
+  margin:       0px;
+  border-radius: 8px;
+  y-offset:     0px;
+  text-color: @foreground;
+}
+
+mainbox {
+  enabled: true;
+  background-color: transparent;
+  orientation: horizontal;
+  children: ["dummy", "box"];
+}
+
+dummy {
+  background-image: url("~/Downloads/1311796.png", height);
+}
+
+box {
+  expand: true;
+  orientation: vertical;
+  children: ["inputbar","listview"];
+}
+
+inputbar {
+  padding: 8px;
+}
+
+entry {
+  placeholder: "";
+}
+
+listview {
+
+}
+
+element {
+  enabled: true;
+  padding: 10px;
+  cursor: pointer;
+}
+
+element alternate normal {
+  background-color: inherit;
+}
+
+element selected normal {
+  background-color: @selected;
+  text-color: @background;
+}

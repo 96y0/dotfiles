@@ -1,0 +1,109 @@
+.dashboard {
+  background-color: $base-color;
+  color: $text-light-color;
+
+  padding      : 16px;
+  font-size    : 14px;
+  border-radius: 8px;
+}
+
+.db_footer {
+  padding: 4px;
+}
+
+.db_profile_box {
+  min-width   : 200px;
+  margin-right: 12px;
+}
+
+.db_profile_name {
+  font-size  : 16px;
+  font-weight: bold;
+}
+
+.db_profile_uptime {
+}
+
+.db_profile_image {
+  background-image: url('/home/watson/.config/eww/images/profile.jpg');
+  background-position: center;
+  background-size: cover;
+
+  min-width: 48px;
+  border-radius: 8px;
+  padding: 4px;
+  margin-right: 12px;
+}
+
+.db_sub_box {
+  padding: 12px;
+
+  margin-top   : 6px;
+  margin-bottom: 6px;
+}
+
+.db_action_btn {
+  background-color: $text-dark-color;
+  border-radius: 8px;
+
+  min-width: 42px;
+  padding  : 2px;
+  margin   : 3px;
+}
+
+.db_vol_icon {
+  font-size: 24px;
+  padding-right: 6px;
+}
+
+.db_bright_icon {
+  font-size: 34px;
+}
+
+.db_spotify_image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  min-height: 6rem;
+  min-width: 6rem;
+  border-radius: 4px;
+}
+
+.db_spotify_text {
+  margin-left: 12px;
+}
+
+.db_spotify_title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.db_spotify_artist {
+  font-size: 14px;
+}
+
+.db_spotify_action_box {
+  padding: 6px;
+
+  font-size: 24px;
+}
+
+.bright scale slider {
+  background: transparent;
+}
+
+.bright scale trough highlight {
+  background-color: $text-light-color;
+	border-radius: 8px;
+}
+
+.bright scale trough {
+	background-color: $text-dark-color;
+	border-radius: 8px;
+	min-height: 8px;
+	min-width: 320px;
+
+	margin-left: 12px;
+	margin-right: 12px;
+}

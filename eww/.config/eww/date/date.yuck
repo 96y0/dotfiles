@@ -1,0 +1,20 @@
+(defwindow date
+  :monitor 0
+  :geometry (geometry :x 0 :y 50 :anchor "top center")
+  :stacking "fg"
+  :windowtype "dialog"
+  (box
+    :class "cal-box"
+    :orientation "v"
+    :space-evenly "false"
+   (label 
+    :class "cal-time" 
+    :text date_time)
+    (label 
+     :class "cal-date" 
+     :text date_date)
+    (calendar :class "box")
+  )
+)
+
+

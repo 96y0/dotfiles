@@ -1,0 +1,98 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "spacing": 0,
+    "height": 42,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window",
+    ],
+    "modules-center": [
+        "custom/player",
+        "tray",
+    ],
+    "modules-right": [
+	      "pulseaudio",
+        "backlight",
+        "battery",
+        "clock",
+    ],
+
+    "hyprland/window": {
+      "format": "{}",
+      "separate-outputs": true
+    },
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+        },
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": []
+        }
+    },
+
+    "clock": {
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "format-alt": "{:%a, %d %b %Y}",
+        "format": "{:%a, %d %b %Y, %I:%M %p}",
+    },
+     "custom/player": {
+        "format": "{}",
+        "max-length": 40,
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/player.sh 2> /dev/null",
+        "exec-if": "pgrep spotify"
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 5
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "kitty -e pulsemixer",
+        "ignored-sinks": ["Easy Effects Sink"],
+        "tooltip": false,        
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["","","","", "", "", ""],
+        "tooltip": false,        
+    },
+    "battery": {
+        "bat": "BAT1",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+}

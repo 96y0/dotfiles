@@ -1,0 +1,22 @@
+; LISTENS
+
+(deflisten active_workspace "scripts/active_workspace.sh")
+
+; POLLS
+
+(defpoll time :interval "5s" `date +\"%I:%M %p\"`)
+(defpoll date_time :interval "1s" `date +\"%I:%M:%S\"`)
+(defpoll date_date :interval "5s" `date +\"%A, %B %d\"`)
+
+(defpoll volume :interval "1s" `pulsemixer --get-volume | awk '{print $1}'`)
+(defpoll brightness :interval "1s" `scripts/brightness.sh`)
+(defpoll battery :interval "15s" `cat /sys/class/power_supply/BAT1/capacity`)
+
+(defpoll song_title :interval "3s" `scripts/music.sh --get-title`)
+(defpoll song_artist :interval "3s" `scripts/music.sh --get-artist`)
+(defpoll song_img_path :interval "3s" `scripts/music.sh --get-image`)
+(defpoll song_status :interval "1s" `scripts/music.sh --get-status`)
+
+(defpoll wifi_status :interval "3s" `scripts/wifi.sh`)
+
+(defpoll uptime :interval "60s" `scripts/uptime.sh`)

@@ -1,0 +1,72 @@
+@import "../theme.rasi"
+
+configuration {
+  show-icon:  false;
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       800px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    padding:                     0px;
+    border-radius:               8px;
+    background-color:            @background;
+}
+mainbox {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-color:                @foreground;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+inputbar {
+    padding:                     100px 80px;
+    background-color:            transparent;
+    background-image:            url("~/Downloads/1311796.png", width);
+    children:                    ["prompt"];
+}
+prompt { 
+  enabled: false; 
+  background-color: @background;
+  text-color: @foreground;
+}
+listview {
+    enabled:          true;
+    columns:          6;
+    lines:            1;
+    cycle:            true;
+    dynamic:          true;
+    scrollbar:        false;
+    layout:           vertical;
+    reverse:          false;
+    fixed-height:     true;
+    fixed-columns:    true;
+
+    spacing:          15px;
+    margin:           15px;
+    background-color: transparent;
+}
+element {
+    enabled:          true;
+    padding:          24px;
+    border-radius:    8px;
+    background-color: @background;
+    text-color:       @foreground;
+}
+element-text {
+    font:             "JetBrainsMono NF 32";
+    background-color: transparent;
+    text-color:       inherit;
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+}
+element selected.normal {
+    background-color: @foreground;           
+    text-color: @background;
+}

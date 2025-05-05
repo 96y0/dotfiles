@@ -1,0 +1,52 @@
+// Generate color using 'pylette' with sorting luminance
+
+// 1311
+$base-color       : rgb(197,47,83);
+$box-color        : rgb(244,142,162);
+$text-dark-color  : rgb(250,184,191);
+$text-medium-color: rgb(252,218,222);
+$text-light-color : rgb(254,247,250);
+
+
+// 1358
+// $base-color       : rgb(6,33,93);
+// $box-color        : rgb(33,71,201);
+// $text-dark-color  : rgb(222,36,187);
+// $text-medium-color: rgb(16,156,236);
+// $text-light-color : rgb(187,152,214);
+
+// 134
+// $base-color       : rgb(58,82,116)  ;
+// $box-color        : rgb(97,131,167) ;
+// $text-dark-color  : rgb(151,156,177);
+// $text-medium-color: rgb(191,204,218);
+// $text-light-color : rgb(249,249,251);
+
+// $base-color       : #2e3d68;
+// $box-color        : #436093;
+// $text-dark-color  : #648cb9;
+// $text-medium-color: #94b8d9;
+// $text-light-color : #e7f0f9;
+
+
+* {
+  all: unset;
+
+  border: none;
+  font-family: 'JetBrainsMono NF';
+}
+
+.box {
+  background-color: $box-color;
+  color: $text-light-color;
+
+  border: none;
+
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 16px;
+}
+
+@import "bar/bar.scss";
+@import "date/date.scss";
+@import "dashboard/dashboard.scss";
