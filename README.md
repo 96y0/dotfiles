@@ -7,7 +7,7 @@
 | task | name |
 | --- | --- |
 | wm | [Hyprland](https://github.com/hyprwm/Hyprland) |
-| terminal | [kitty](https://github.com/kovidgoyal/kitty) |
+| terminal | [kitty](https://github.com/kovidgoyal/kitty)/[wezterm]() |
 | launcher | [rofi](https://github.com/davatorium/rofi) |
 | editor | [neovim](https://github.com/neovim/neovim) |
 | bar | [eww](https://github.com/elkowar/eww) |
@@ -18,31 +18,41 @@
 
 ---
 
-## Setup
+## Dependencies
+
+#### Gentoo
 
 > NOTE: You must have guru repo to be able to install all dependencies.
-
-1. Install dependencies
 ```bash
 emerge --ask gui-wm/hyprland gui-libs/xdg-desktop-portal-hyprland gui-apps/hyprlock \
 gui-apps/hyprshot gui-apps/eww gui-apps/wl-clipboard app-misc/yazi \
 x11-terms/kitty gui-apps/rofi-wayland gui-apps/swww gnome-extra/nemo app-editors/neovim \
-app-misc/brightnessctl media-sound/pulsemixer media-sound/playerctl
+app-misc/brightnessctl media-sound/pulsemixer media-sound/playerctl media-sound/pavucontrol \
+gui-apps/hypridle app-admin/stow
 ```
 
-2. Clone the repo
+#### Arch
 ```bash
-git clone https://github.com/Potcharapoll/dotfiles
+pacman -S hyprland xdg-desktop-portal-hyprland wl-clipboard yazi kitty rofi-wayland \
+swww nemo neovim brightnessctl pulsemixer pavucontrol playerctl hyprlock hypridle stow 
+```
+
+```bash
+paru -S eww hyprshot 
+
+```
+
+## Setup
+
+1.Clone the repo
+```bash
+git clone https://github.com/96y0/dotfiles
 cd dotfiles
 ```
 
-3. copy all config
+2.Use GNU stow
 ```bash
-cp -r config/* $HOME/.config/
-cp -r icons/* $HOME/.icons/
-cp -r themmes/* $HOME/.themes/
-cp -r fonts/* $HOME/.fonts/
-cp -r .oh-my-bash/ $HOME/
-cp .tmux.conf $HOME/
-cp .vimrc $HOME/
+stow .
 ```
+
+
