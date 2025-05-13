@@ -1,0 +1,16 @@
+#!/bin/sh
+
+export DISPLAY=:0
+export WAYLAND_DISPLAY=wayland-1
+#export DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-A46dL1O0Ks,guid=b58e55e68a575275cc3f59ab681f085b
+
+curr=$(acpi -b | grep -oP '\d+(?=%)')
+status=$1
+
+if [ $status -eq 1 ]; then
+  err=$(notify-send -i battery_plugged "Charging" "Battery is now charging." 2>&1)
+  echo "$err" | tee -a /tmp/batteryplugnotify
+elif [ $status -eq 0 ]; then
+  err=$(notify-send -i battery_plugged "On Battery" "Battery discharging, $curr% remaining." 2>&1)
+  echo "$err" | tee -a /tmp/batteryplugnotify
+fi

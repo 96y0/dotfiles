@@ -1,0 +1,138 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "spacing": 0,
+
+    "modules-left": [ "hyprland/workspaces", "tray" ],
+    "modules-center": [ "custom/player" ],
+    "modules-right": [ "pulseaudio", "pulseaudio#microphone", "bluetooth", "backlight", "battery", "clock" ],
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+              "1": "",
+              "2": "",
+              "3": "",
+              "4": "",
+              "5": "",
+              "6": ""
+        },
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": []
+        }
+    },
+
+    "clock": {
+      "format": " {0:%I:%M %p} 󰃭 {0:%d/%m}", // add clock icon at front.
+      "rotate": 0,
+      "tooltip-format": "<span size='8.5pt' font='JetBrainsMono NF'>{calendar}</span>",
+      "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "on-scroll": 1,
+        "format": {
+          "days": "<span color='#F48EA2'><b>{}</b></span>",
+          "months": "<span color='#F48EA2'><b>{}</b></span>",
+          "weekdays": "<span color='#C52F53'><b>{}</b></span>",
+          "today": "<span color='#C52F53'><b>{}</b></span>"
+        }
+      },
+      "actions":  {
+        "on-click-right": "mode",
+        "on-scroll-up": "tz_up",
+        "on-scroll-down": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+      }
+    },
+
+     "custom/player": {
+        "format": "{}",
+        "max-length": 40,
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/player.sh 2> /dev/null",
+        "exec-if": "pgrep spotify"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "rotate": 0,
+        "spacing": 5
+    },
+
+    "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "rotate": 0,
+      "format-muted": "󰝟",
+      "on-click": "pavucontrol -t 3",
+      "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
+      "tooltip-format": "{icon} {desc} // {volume}%",
+      "scroll-step": 5,
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+      }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source} {source_volume}%",
+        "rotate": 0,
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "pavucontrol -t 4",
+        "on-click-middle": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
+        "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
+        "scroll-step": 5
+    },
+
+    "backlight": {
+      "device": "intel_backlight",
+      "rotate": 0,
+      "format": "{icon} {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
+      "tooltip-format": "{icon} {percent}% ",
+      "on-scroll-up": "brightnessctl s 1%+",
+      "on-scroll-down": "brightnessctl s 1%-",
+      "min-length": 6
+    },
+
+    "battery": {
+      "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 20
+      },
+      "format": "{icon} {capacity}%",
+      "rotate": 0,
+      "format-charging": "  {capacity}%",
+      "format-plugged": "  {capacity}%",
+      //"format-alt": "{time} {icon}",
+      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+      "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "blueman-manager"
+      }
+}

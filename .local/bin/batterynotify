@@ -1,0 +1,35 @@
+#!/bin/sh
+
+export DISPLAY=:0
+export WAYLAND_DISPLAY=wayland-1
+#export DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-A46dL1O0Ks,guid=b58e55e68a575275cc3f59ab681f085b
+
+CURR=$(acpi -b | grep -oP '\d+(?=%)')
+WARNLEVEL=40
+FULLLEVEL=98
+
+WARN_FILE=/tmp/batwarn
+FULL_FILE=/tmp/batfull
+LOG_FILE=/tmp/batterynotify_log
+
+if [ -f $FULL_FILE ] && [ $CURR -ne $FULLLEVEL ]; then
+  rm $FULL_FILE
+  echo "[LOG-$(date -u)]: delete $FULL_FILE" | tee -a $LOG_FILE
+elif [ -f $WARN_FILE ] && [ $CURR -gt $WARNLEVEL ]; then
+  rm $WARN_FILE
+  echo "[LOG-$(date -u)]: delete $WARN_FILE" | tee -a $LOG_FILE
+fi
+
+if [ ! -f $FULL_FILE ] && [ $CURR -eq $FULLLEVEL ]; then
+  touch $FULL_FILE
+  notify-send "Battery is Full" "$CURR% Battery charged." -i battery-full
+
+  # err=$(notify-send "Battery is Full" "$CURR% Battery charged." -i battery-full 2>&1)
+  # echo "[LOG-$(date -u)]: $err" | tee -a $LOG_FILE
+elif [ ! -f $WARN_FILE ] && [ $CURR -le $WARNLEVEL ]; then
+  touch $WARN_FILE
+  notify-send "Battery is Low" "$CURR% Battery left." -i battery-low
+
+  # err=$(notify-send "Battery is Low" "$CURR% Battery left." -i battery-low 2>&1)
+  # echo "[LOG-$(date -u)]: $err" | tee -a $LOG_FILE
+fi

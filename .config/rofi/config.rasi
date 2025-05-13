@@ -1,0 +1,75 @@
+@import"theme.rasi"
+
+configuration {
+  modi             :  "drun";
+  display-drun     :  "";
+  show-icons       :  true;
+}
+
+window {
+  transparency     :  "real";
+  location         :  center;
+  anchor           :  center;
+  width            :  600px;
+  x-offset         :  0px;
+  y-offset         :  0px;
+  border-radius    :  16px;
+  border-color     :  @foreground;
+  background-color :  @background;
+  text-color       :  @foreground;
+}
+
+mainbox {
+  orientation      : horizontal;
+  children         : ["box"];
+}
+
+box {
+  padding          : 16px;
+  orientation      : vertical;
+  children         : ["inputbar","listview"];
+}
+
+inputbar {
+  padding          :  16px;
+  children         : [prompt,entry];
+}
+
+entry {
+  placeholder      : "Search Applications";
+  placeholder-color: @foreground;
+  text-color       : @selected;
+}
+
+listview {
+  scrollbar        : none;
+  lines            : 6;
+  border           : 0;
+}
+
+element {
+  enabled          : true;
+  padding          : 12px;
+  border-radius    : 16px;
+  background-color : transparent;
+  text-color       : @foreground;
+  cursor           : pointer;
+}
+
+element-icon {
+  size             : 32px;
+}
+
+element-text {
+  vertical-align   : 0.5;
+}
+
+element normal normal,
+element alternate normal {
+  background-color : inherit;
+}
+
+element selected normal {
+  background-color : @selected;
+  text-color       : @background;
+}

@@ -1,0 +1,75 @@
+@define-color background          #1b1b1b;
+@define-color text-color          #F48EA2;
+@define-color selected-text-color #C52F53;
+
+* {
+    font-weight: bold;
+    font-size  : 11px; 
+    font-family: 'JetBrainsMono Nerd Font', sans-serif;
+}
+
+window#waybar {
+    background: rgba(0,0,0,0.5);
+    color     : @text-color;
+}
+
+#pulseaudio,
+#backlight,
+#battery,
+#custom-player,
+#bluetooth,
+#clock,
+#tray,
+#workspaces
+{
+    background-color: @background;
+    color           : inherit; 
+    padding         : 0 12px;
+    margin          : 4px 4px;
+    border-radius   : 24px;
+}
+
+#pulseaudio {
+  margin-right : 0px;
+  border-radius: 24px 0px 0px 24px;
+}
+
+#pulseaudio.microphone {
+  margin-right : 0px;
+  margin-left  : 0px;
+  border-radius: 0px;
+}
+
+#backlight {
+  margin-right : 0px;
+  margin-left  : 0px;
+  border-radius: 0px;
+}
+
+#battery {
+  margin-left  : 0px;
+  border-radius: 0px 24px 24px 0px;
+}
+
+#workspaces {
+    background-color: @background;
+    color           : inherit;
+    border-radius   : 24px;
+}
+
+#bluetooth {
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#workspaces button {
+    background-color: transparent;
+    border-radius   : 24px;
+    color           : inherit;
+}
+
+#workspaces button.active {
+    background-color: transparent;
+    color           : @selected-text-color; 
+}

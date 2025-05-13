@@ -1,0 +1,52 @@
+@import "../theme.rasi"
+
+configuration {
+    show-icons      : false;
+}
+
+window {
+    transparency    : "real";
+    location        : center;
+    anchor          : center;
+    x-offset        : 0px;
+    y-offset        : 0px;
+    border          : 1px solid;
+    border-radius   : 16px;
+    border-color    : @foreground;
+    background-color: @background;
+}
+
+mainbox {
+    background-color: transparent;
+    children        : [ "listview" ];
+}
+
+listview {
+    columns         : 6;
+    lines           : 1;
+    cycle           : true; 
+    fixed-height    : true;
+    fixed-columns   : true;
+    margin          : 15px;
+    background-color: transparent;
+}
+
+element {
+    padding         : 30px 10px;
+    border-radius   : 12px;
+    background-color: @background;
+    text-color      : @foreground;
+}
+
+element-text {
+    font            : "JetBrainsMono NF 48";
+    background-color: transparent;
+    text-color      : inherit;
+    vertical-align  : 0.5;
+    horizontal-align: 0.45;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color      : @foreground;
+}

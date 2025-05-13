@@ -1,6 +1,0 @@
-* {
-  font:       "JetBrainsMonoNF 10";
-  background: #C52F53;
-  foreground: #F48EA2;
-  selected:   #FAB8BF;
-}
